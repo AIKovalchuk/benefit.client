@@ -7,4 +7,5 @@ services:
         ports:
             - 3000:3000
         volumes:
-            - ./client/src:/app/src
+            - ./client:/app
+            - /app/node_modules
