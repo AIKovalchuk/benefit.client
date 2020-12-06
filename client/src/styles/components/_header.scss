@@ -1,5 +1,33 @@
-header {
-    display: flex;
-    background-color: rgb(3, 0, 177);
-    margin: 0;
+.header {
+    display: block;
+    position: relative;
+    background-color: white;
+    color: black;
+
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .nav__wrapper {
+        display: flex;
+        list-style: none;
+
+        .nav__item{
+            a {
+                display: block;
+                padding: 1.5rem 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .brand {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
 }
