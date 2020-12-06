@@ -1,31 +1,53 @@
 import React from 'react'
+import Button from '../../base/Button'
 import Header from '../../layout/Header'
 
 interface Props {}
 
 const Main = (props: Props) => {
     return (
-        <div className="main-page">
+        <div className="page">
             <Header />
-            <h1 className="__title">Main Page</h1>
-            <div className="block">
-                <div className="info">
-                    <div className="info-text">
-                        Это какой-то текст, который будет выводиться на главной странице. Он нужен,
-                        чтобы заинтересовать пользователя
-                    </div>
-                    <div className="info-links">
-                        <ul className="btn-group">
-                            <li>
-                                <a>Пройти анкетирование</a>
-                            </li>
-                            <li>
-                                <a>Посмотреть льготы</a>
-                            </li>
-                        </ul>
+            <div className="container">
+                <div className="banner blue">
+                    <div className="banner__title">Узнайте свои льготы прямо сейчас</div>
+                    <div className="banner__content">
+                        <div className="info__text">
+                            Ответье на несколько вопросов и сервис подберет Вам подходящие льготы
+                        </div>
+                        <div className="info__submit">
+                            <Button>Пройти анкету</Button>
+                        </div>
                     </div>
                 </div>
-                <img src="" alt="" className="img" />
+                <div className="banner">
+                    <div className="banner__title">Все льготы в одном месте</div>
+                    <div className="banner__content">
+                        <div className="info">
+                            <div className="info__text">
+                                Ответье на несколько вопросов и сервис подберет Вам подходящие
+                                льготы
+                            </div>
+                            <div className="info__submit">
+                                <Button>Пройти анкету</Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="banner blue">
+                    <div className="banner__title">Работа с родственниками</div>
+                    <div className="banner__content">
+                        <div className="info">
+                            <div className="info__text">
+                                Ответье на несколько вопросов и сервис подберет Вам подходящие
+                                льготы
+                            </div>
+                            <div className="info__submit">
+                                <Button>Пройти анкету</Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

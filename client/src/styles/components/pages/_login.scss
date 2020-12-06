@@ -1,0 +1,9 @@
+.auth-form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        padding: 20px 16px;
+        border: 1px solid $grey;
+    }
+}

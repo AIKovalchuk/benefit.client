@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    width: 100%;
+    padding: 5rem 10rem;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    &__text {
+    }
+
+    &.blue {
+        background-color: #2862ac;
+    }
+}
