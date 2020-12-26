@@ -19,7 +19,7 @@ module.exports = {
     devServer: {
         // contentBase: path.join(__dirname, 'build'),
         // compress: true,
-        host: '0.0.0.0',
+        historyApiFallback: true,
         port: 3000,
         historyApiFallback: true,
         watchOptions: {

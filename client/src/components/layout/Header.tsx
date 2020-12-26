@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 interface Props {}
 
 const Header = (props: Props) => {
@@ -13,13 +15,19 @@ const Header = (props: Props) => {
                     <nav className="main-nav">
                         <ul className="nav__wrapper">
                             <li className="nav__item">
-                                <a>Главная</a>
+                                <Link to="/">
+                                    <a>Главная</a>
+                                </Link>
                             </li>
                             <li className="nav__item">
-                                <a>Анкетирование</a>
+                                <Link to="/anketa">
+                                    <a>Анкетирование</a>
+                                </Link>
                             </li>
                             <li className="nav__item">
-                                <a>Льготы</a>
+                                <Link to="/benefits">
+                                    <a>Льготы</a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
@@ -28,10 +36,14 @@ const Header = (props: Props) => {
                     <nav className="auth-nav">
                         <ul className="nav__wrapper">
                             <li className="nav__item">
-                                <a>Войти</a>
+                                <Link to="/login">
+                                    <a>Войти</a>
+                                </Link>
                             </li>
                             <li className="nav__item">
-                                <a>Зарегестрироваться</a>
+                                <Link to="/sigup">
+                                    <a>Зарегестрироваться</a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
