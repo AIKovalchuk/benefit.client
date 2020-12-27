@@ -41,7 +41,7 @@ const Header = (props: Props) => {
                                 </Link>
                             </li>
                             <li className="nav__item">
-                                <Link to="/sigup">
+                                <Link to="/signup">
                                     <a>Зарегестрироваться</a>
                                 </Link>
                             </li>

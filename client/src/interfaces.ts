@@ -25,3 +25,38 @@ export interface IRelative {
     lastName: string
     birthday: number
 }
+
+export interface Categorie {
+    label: string
+    value: string
+}
+
+export interface IUser {
+    firstName: string
+    lastName: string
+    middleName: string
+    categories: null | Categorie[]
+    mail: string
+    password: string
+    passport: string
+    legalAddress: string
+}
+
+export interface IUser2 {
+    firstName: string
+    lastName: string
+    middleName: string
+    categories: null | string[]
+    mail: string
+    password: string
+    passport: string
+    legalAddress: string
+}
+
+export interface IUserExtend extends IUser {
+    id: number,
+    privileges: IBenefit[],
+    grades: string[],
+    timeCreated: string[],
+    active: boolean
+}

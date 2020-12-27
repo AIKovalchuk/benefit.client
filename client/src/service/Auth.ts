@@ -1,7 +1,33 @@
-class AuthService {
-    static login(): void {}
+import axios from "axios";
+import { IUser2, IUserExtend } from "../interfaces";
+import { headers_user, route } from "./route";
 
-    static sigup(): void {}
+class AuthService {
+  static async login(email: string, pwd: string): Promise<IUserExtend> {
+    const { data } = await axios.post(
+      route("/api/v1/user/login"),
+      { username: email, password: pwd },
+      { headers: headers_user }
+    );
+    return data;
+  }
+
+  static async signup(user: IUser2): Promise<IUserExtend> {
+    const { data } = await axios.post(
+      route("/api/v1/user/create"),
+      { ...user },
+      { headers: headers_user }
+    );
+    return data;
+  }
+
+  static async active(id: number, factor: string): Promise<void> {
+    axios.post(
+      route("/api/v1/user/activate"),
+      { userId: id, factor },
+      { headers: headers_user }
+    );
+  }
 }
 
-export default AuthService
+export default AuthService;
