@@ -11,6 +11,10 @@
         padding-top: 0;
         padding-bottom: 0;
 
+        .header__middle {
+            margin: 0 auto;
+        }
+
         @include phone {
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -38,6 +42,9 @@
             }
 
             .nav__item {
+                &:first-child {
+                    // margin-right: 12px;
+                }
                 a {
                     display: block;
                     padding: 1.5rem 1rem;

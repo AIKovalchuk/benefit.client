@@ -22,10 +22,13 @@ const LogIn = (props: Props) => {
         },
     })
     return (
-        <div>
-            <form onSubmit={formik.handleSubmit}>
-                <label htmlFor="login">login</label>
-
+        <div className="login-page">
+            <div className="title">
+                <h1 className="main">Вход</h1>
+                <h2 className="sub">на портал Льгота.Ру</h2>
+            </div>
+            <form onSubmit={formik.handleSubmit} className="form">
+                <label htmlFor="login">Почта</label>
                 <input
                     id="login"
                     name="login"
@@ -34,8 +37,7 @@ const LogIn = (props: Props) => {
                     value={formik.values.login}
                 />
 
-                <label htmlFor="password">password</label>
-
+                <label htmlFor="password">Пароль</label>
                 <input
                     id="password"
                     name="password"

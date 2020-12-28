@@ -1,11 +1,13 @@
-import React, { Children } from 'react'
+import React from 'react'
+import Header from './Header'
 
-interface Props {
-    children: React.FC
-}
-
-const Page = (props: Props) => {
-    return <div></div>
+const Page: React.FC = (props) => {
+    return (
+        <div className="page">
+            <Header />
+            {props.children}
+        </div>
+    )
 }
 
 export default Page

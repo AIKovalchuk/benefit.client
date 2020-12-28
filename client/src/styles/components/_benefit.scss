@@ -1,0 +1,32 @@
+.benefit {
+    border: 2px solid $primary;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    margin: 12px auto;
+    padding: 8px;
+
+    min-height: 80px;
+
+    &:hover {
+        background-color: rgba($color: #322eff, $alpha: 0.3);
+    }
+
+    .title {
+        color: $primary;
+        font-size: 28px;
+    }
+
+    .description {
+        color: $primary;
+        font-size: 20px;
+    }
+}
+
+.benefit-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}

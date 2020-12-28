@@ -13,6 +13,9 @@ $header: $white;
 $header-text: $blue;
 
 $btn: $blue;
-$btn-hover: $dark-blue;
+$btn-hover: rgba(
+    $color: #322eff,
+    $alpha: 0.3,
+);
 
 $link: #013e83;

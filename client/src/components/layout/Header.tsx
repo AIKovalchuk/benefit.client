@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../providers/AuthProvide'
+import Button from '../base/Button'
 
 interface Props {}
 
@@ -35,28 +36,33 @@ const Header = (props: Props) => {
                     </nav>
                 </div>
                 <div className="header__end">
-                    {isLoggedIn ? (
+                    {!isLoggedIn ? (
                         <nav className="auth-nav">
                             <ul className="nav__wrapper">
                                 <li className="nav__item">
-                                    <Link to="/login">
+                                    <Button outline href="/login">
+                                        Войти
+                                    </Button>
+                                    {/* <Link to="/login">
                                         <a>Войти</a>
-                                    </Link>
+                                    </Link> */}
                                 </li>
                                 <li className="nav__item">
-                                    <Link to="/signup">
-                                        <a>Зарегестрироваться</a>
-                                    </Link>
+                                    <Button blue href="/signup">
+                                        Зарегистрироваться
+                                    </Button>
+                                    {/* <Link to="/signup">
+                                        <a></a>
+                                    </Link> */}
                                 </li>
                             </ul>
                         </nav>
-                    ) : (
-                        <div>
-                            <Link to="/">
-                                <a>Личный кабинет</a>
-                            </Link>
-                        </div>
-                    )}
+                    ) : // <div>
+                    //     <Link to="/">
+                    //         <a>Личный кабинет</a>
+                    //     </Link>
+                    // </div>
+                    null}
                 </div>
             </div>
         </header>

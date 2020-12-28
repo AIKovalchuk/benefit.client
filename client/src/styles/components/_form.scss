@@ -1,0 +1,57 @@
+.card {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 12px;
+    border: 2px solid $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    * {
+        margin-bottom: 18px;
+    }
+
+    .filed {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    label {
+        align-self: flex-start;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        // color: $white;
+    }
+
+    input {
+        background: $white;
+        border-radius: 20px;
+        height: 24px;
+        // width: 100%;
+        padding: 12px;
+        margin-right: 12px;
+    }
+
+    button {
+        padding: 8px 12px;
+
+        background: $primary;
+        border: 2px solid $white;
+        box-sizing: border-box;
+        border-radius: 12px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: $white;
+    }
+}
