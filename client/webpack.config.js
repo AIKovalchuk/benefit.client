@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: './src/index.tsx',
@@ -33,6 +34,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `[name].css`,
         }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/assets/image_1.png'),
+                    to: path.resolve(__dirname, 'dist'),
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/image_2.png'),
+                    to: path.resolve(__dirname, 'dist'),
+                },
+            ],
+        }),
     ],
     module: {
         rules: [
@@ -57,6 +70,10 @@ module.exports = {
                         ],
                     },
                 },
+            },
+            {
+                test: /\.png$/,
+                use: ['file-loader'],
             },
         ],
     },

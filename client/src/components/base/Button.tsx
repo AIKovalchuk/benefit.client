@@ -7,6 +7,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     disabled?: boolean
     active?: boolean
+    blue?: boolean
     href?: string
 }
 
@@ -16,9 +17,10 @@ const Button: React.FC<Props> = ({
     className = null,
     disabled = false,
     active = false,
+    blue = false,
     ...attrs
 }) => {
-    const classes = classNames('btn', className, { active })
+    const classes = classNames('btn', className, { active }, { blue })
 
     // TODO: any ->  normal interface | type
     const Tag: any = attrs.href ? 'a' : 'button'

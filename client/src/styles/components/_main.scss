@@ -1,4 +1,82 @@
-.main_page {
-    margin: 0;
-    padding: 0;
+.page {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+        align-items: stretch;
+
+        .banner {
+            background-color: $white;
+            padding: 0 300px;
+            margin: 0;
+
+            &.blue {
+                background-color: $primary;
+            }
+
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .content__title {
+                    margin: auto 0 auto 0;
+                    .title__main {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 40px;
+                        line-height: 64px;
+                        color: $white;
+                    }
+                    .title__sub {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 38px;
+                        color: $white;
+                    }
+                }
+
+                .content__text {
+                    margin: auto 0 auto 0;
+                    max-width: 629px;
+                    .description {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 29px;
+                        color: $white;
+                        word-wrap: normal;
+                    }
+                }
+
+                .content__control {
+                    margin: auto 0 auto 0;
+                    a {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 38px;
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &__img {
+                width: 545px;
+                height: 424px;
+            }
+        }
+    }
 }
